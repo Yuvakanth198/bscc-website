@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Store - BSCC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5faff;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Medical Store</h1>
+  <form>
+    <label for="media">Upload Photo/Video:</label>
+    <input type="file" id="media" name="media" accept="image/*,video/*" required>
+
+    <label for="product">Product Name:</label>
+    <input type="text" id="product" name="product" required>
+
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" name="quantity" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" name="contact" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
