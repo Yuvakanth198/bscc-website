@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy Animals - BSCC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c5282;
+    }
+    .category-box {
+      display: inline-block;
+      width: 200px;
+      margin: 20px;
+      padding: 30px;
+      background-color: #e2e8f0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .filters, .results {
+      display: none;
+      margin-top: 20px;
+    }
+    select {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .result-card {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px auto;
+      width: 80%;
+      text-align: left;
+    }
+  </style>
+  <script>
+    function showFilters(category) {
+      const sections = document.querySelectorAll('.filters');
+      sections.forEach(section => section.style.display = 'none');
+
+      const results = document.querySelectorAll('.results');
+      results.forEach(res => res.style.display = 'none');
+
+      document.getElementById(category + '-filters').style.display = 'block';
+      document.getElementById(category + '-results').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Buy Animals</h1>
+
+  <div class="category-box" onclick="showFilters('countrychicken')">Country Chicken</div>
+  <div class="category-box" onclick="showFilters('racingchickens')">Racing Chickens</div>
+  <div class="category-box" onclick="showFilters('sheep')">Sheep</div>
+  <div class="category-box" onclick="showFilters('goat')">Goat</div>
+
+  <!-- Country Chicken Filters -->
+  <div class="filters" id="countrychicken-filters">
+    <h3>Filter Country Chicken</h3>
+    <select><option>Country</option></select>
+    <select><option>State</option></select>
+    <select><option>District</option></select>
+    <select><option>Mandal</option></select>
+    <select><option>Village</option></select>
+  </div>
+  <div class="results" id="countrychicken-results">
+    <!-- Sample Result -->
+    <div class="result-card">
+      <strong>Name:</strong> Ramu<br>
+      <strong>Breed:</strong> Aseel<br>
+      <strong>Weight:</strong> 2.5 KG<br>
+      <strong>Location:</strong> Andhra Pradesh, Krishna<br>
+      <strong>Contact:</strong> 9876543210
+    </div>
+  </div>
+
+  <!-- Racing Chickens Filters -->
+  <div class="filters" id="racingchickens-filters">
+    <h3>Filter Racing Chickens</h3>
+    <select><option>Country</option></select>
+    <select><option>State</option></select>
+    <select><option>District</option></select>
+    <select><option>Mandal</option></select>
+    <select><option>Village</option></select>
+  </div>
+  <div class="results" id="racingchickens-results">
+    <!-- Add dynamic entries here later -->
+  </div>
+
+  <!-- Sheep Filters -->
+  <div class="filters" id="sheep-filters">
+    <h3>Filter Sheep</h3>
+    <select><option>Country</option></select>
+    <select><option>State</option></select>
+    <select><option>District</option></select>
+    <select><option>Mandal</option></select>
+    <select><option>Village</option></select>
+  </div>
+  <div class="results" id="sheep-results">
+    <!-- Add dynamic entries here later -->
+  </div>
+
+  <!-- Goat Filters -->
+  <div class="filters" id="goat-filters">
+    <h3>Filter Goat</h3>
+    <select><option>Country</option></select>
+    <select><option>State</option></select>
+    <select><option>District</option></select>
+    <select><option>Mandal</option></select>
+    <select><option>Village</option></select>
+  </div>
+  <div class="results" id="goat-results">
+    <!-- Add dynamic entries here later -->
+  </div>
+</body>
+</html>
