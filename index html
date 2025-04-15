@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BSCC - Main Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/Z2MYNbj.png" alt="BSCC Logo" class="logo" />
+    <h1>BSCC</h1>
+    <p>Buy & Sell Country Chickens, Goats, Sheep & More</p>
+  </header>
+
+  <main>
+    <div class="box" onclick="goTo('buy.html')">Buy Page</div>
+    <div class="box" onclick="goTo('sell.html')">Sell Page</div>
+    <div class="box" onclick="goTo('medical.html')">Medical Store</div>
+    <div class="box" onclick="goTo('suggestions.html')">Suggestions</div>
+  </main>
+
+  <footer>
+    <p>© 2025 BSCC - All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  flex-grow: 1;
+}
+
+.box {
+  background-color: #111;
+  border: 2px solid #333;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  transition: transform 0.2s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  font-size: 0.9rem;
+}
+function goTo(page) {
+  window.location.href = page;
+}
